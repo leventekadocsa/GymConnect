@@ -32,3 +32,28 @@ button:hover {
   top: 10px; /* Adjust the top distance as needed */
   right: 10px; /* Adjust the right distance as needed */
 }
+
+/* Style for the menu */
+.dashboard-menu {
+  text-align: left; /* Align menu items to the left */
+  margin-top: 20px; /* Add some space between menu and content */
+}
+
+/* Style for menu items */
+.dashboard-menu ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+}
+
+.dashboard-menu li {
+  margin-bottom: 5px; /* Add some space between menu items */
+}
+
+.dashboard-menu a {
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Set link color */
+}
+
+.dashboard-menu a:hover {
+  color: #007bff; /* Change link color on hover */
+}
