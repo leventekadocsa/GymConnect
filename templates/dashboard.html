@@ -9,21 +9,24 @@
   </head>
   <body>
     <div class="dashboard-container">
-      <h1>Welcome to Your Dashboard</h1>
-      <a href="{{ url_for('logout') }}"
-        ><button class="dashboard-button">Logout</button></a
-      >
-      <div class="dashboard-menu">
-        <ul>
-          <li><a href="#">Menu Item 1</a></li>
-          <li><a href="#">Menu Item 2</a></li>
-          <li><a href="#">Menu Item 3</a></li>
-          <!-- Add more menu items as needed -->
-        </ul>
+      <div class="header">
+        <div class="welcome">
+          <h2>Welcome to Your Dashboard: {{ username }}</h2>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#" >Item 1</a></li>
+            <li><a href="#" >Item 2</a></li>
+            <li><a href="#" >Item 3</a></li>
+          </ul>
+        </div>
+          <a href="{{ url_for('logout') }}"><button class="dashboard-button">Logout</button></a>
       </div>
-      <div class="dashboard-content">
-        <!-- Dashboard content goes here -->
+        <div class="dashboard-content">
+          <!-- Dashboard content goes here -->
+          <div class""></div>
       </div>
     </div>
+    
   </body>
 </html>

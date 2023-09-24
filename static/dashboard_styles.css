@@ -1,18 +1,74 @@
-/* dashboard_styles.css */
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #81beff;
+  color: #000000;
+  padding: 10px 20px;
+}
+
+.welcome {
+  flex: 1;
+}
+
+.menu {
+  flex: 1;
+  text-align: center;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li a {
+  color: #ffffff; /* Black text color */
+}
+
+.menu li {
+  display: inline;
+  margin: 0 10px;
+  background-color: #311d9e; /* Blue background color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px 20px; /* Add some padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Show pointer on hover */
+  margin-top: 10px; /* Add some space above the button */
+
+}
+
+.menu li:hover {
+  background-color: #4f5099; /* Darker shade of blue on hover */
+}
+
+.logout {
+  flex: 1;
+  text-align: right;
+}
+
+
+
+/* dashboard_styles.css */
+.dashboard-content {
+  background-color: #a15555; /* Replace with your desired color */
+  padding: 20px; /* Add padding for better visibility */
+  border-radius: 0; /* Remove border-radius */
+  margin: 0; /* Remove any default margin */
+  height: calc(100vh - 60px); /* Calculate the height based on viewport height minus header height */
+  box-sizing: border-box; /* Ensure padding is included in the height calculation */
+}
 /* Style for the container that holds the dashboard content */
 .dashboard-container {
   background-color: #fff; /* White background */
-  padding: 20px; /* Add some padding */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
   text-align: center; /* Center the text inside the container */
   position: relative; /* Set the container position to relative */
 }
 
 /* Style for buttons */
 button {
-  background-color: #007bff; /* Blue background color */
+  background-color: #1a39c2; /* Blue background color */
   color: #fff; /* White text color */
   border: none; /* Remove border */
   border-radius: 4px; /* Rounded corners */
@@ -23,37 +79,14 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3; /* Darker shade of blue on hover */
+  background-color: #2797e2; /* Darker shade of blue on hover */
 }
 
 /* Style for the logout button */
 .dashboard-button {
-  position: absolute; /* Set the button position to absolute */
-  top: 10px; /* Adjust the top distance as needed */
-  right: 10px; /* Adjust the right distance as needed */
+  position: relative; /* Set the button position to absolute */
+  margin-bottom: 10px;
 }
 
-/* Style for the menu */
-.dashboard-menu {
-  text-align: left; /* Align menu items to the left */
-  margin-top: 20px; /* Add some space between menu and content */
-}
 
-/* Style for menu items */
-.dashboard-menu ul {
-  list-style-type: none; /* Remove default bullet points */
-  padding: 0; /* Remove default padding */
-}
 
-.dashboard-menu li {
-  margin-bottom: 5px; /* Add some space between menu items */
-}
-
-.dashboard-menu a {
-  text-decoration: none; /* Remove underline from links */
-  color: #333; /* Set link color */
-}
-
-.dashboard-menu a:hover {
-  color: #007bff; /* Change link color on hover */
-}
