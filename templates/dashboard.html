@@ -11,22 +11,82 @@
     <div class="dashboard-container">
       <div class="header">
         <div class="welcome">
-          <h2>Welcome to Your Dashboard: {{ username }}</h2>
+           <h2>Hello, {{ username }}</h2>
         </div>
         <div class="menu">
           <ul>
-            <li><a href="#" >Item 1</a></li>
-            <li><a href="#" >Item 2</a></li>
+            <li><a href="#" >Keresés</a></li>
+            <li><a href="#" >Chat</a></li>
             <li><a href="#" >Item 3</a></li>
           </ul>
         </div>
           <a href="{{ url_for('logout') }}"><button class="dashboard-button">Logout</button></a>
       </div>
-        <div class="dashboard-content">
-          <!-- Dashboard content goes here -->
-          <div class""></div>
+      <div class="dashboard-content" id="dashboard-content">
+
+        <div class="main-content1">
+          
+        </div>
+
+
+        <div class="main-content2">
+          <h3>Chat Content</h3>
+            <div class="chat-container">
+              <div class="chat-messages">
+                <!-- Chat messages go here -->
+              </div>
+
+              <div class="chat-input">
+                <input type="text" placeholder="Type a message...">
+                <button>Send</button>
+              </div>
+            </div>
+        </div>
+
+        <div class="main-content3">
+
+        </div>
+
+
+      </div>
       </div>
     </div>
     
-  </body>
-</html>
+
+
+    
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        // Function to hide all main-content divs
+        function hideAllMainContent() {
+          document.querySelector('.main-content1').style.display = 'none';
+          document.querySelector('.main-content2').style.display = 'none';
+          document.querySelector('.main-content3').style.display = 'none';
+        }
+      
+        // Event listener for Item 1
+        document.querySelector('.menu li:nth-child(1)').addEventListener('click', function() {
+          hideAllMainContent();
+          document.querySelector('.main-content1').style.display = 'block';
+        });
+      
+        // Event listener for Item 2
+        document.querySelector('.menu li:nth-child(2)').addEventListener('click', function() {
+          hideAllMainContent();
+          document.querySelector('.main-content2').style.display = 'block';
+        });
+      
+        // Event listener for Item 3
+        document.querySelector('.menu li:nth-child(3)').addEventListener('click', function() {
+          hideAllMainContent();
+          document.querySelector('.main-content3').style.display = 'block';
+        });
+      });
+      
+
+    </script>
+    
+    </body>
+    </html>
+
