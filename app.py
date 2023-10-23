@@ -78,6 +78,17 @@ def dashboard():
     username = current_user.username 
     return render_template('dashboard.html', username=username)
 
+# Chat route (requires authentication)
+@app.route('/chat')
+@login_required
+def chat():
+    return render_template('chat.html')
+
+@app.route('/page3')
+@login_required
+def page3():
+    return render_template('page3.html')
+
 
 # Logout route (requires authentication)
 @app.route('/logout')

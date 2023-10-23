@@ -1,10 +1,10 @@
-
+/* CSS for the header */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #666464; /* Light grey background color */
-  color: #000000;
+  background-color: #666464; /* Dark grey background color */
+  color: #ffffff; /* White text color */
   padding: 10px 20px;
   border-radius: 10px; /* Rounded corners */
 }
@@ -23,48 +23,46 @@
   padding: 0;
 }
 
-.menu li a {
-  color: #ffffff; /* Black text color */
-}
-
 .menu li {
   display: inline;
   margin: 0 10px;
-  background-color: #773e6e; /* Blue background color */
-  border: none; /* Remove border */
-  border-radius: 4px; /* Rounded corners */
-  padding: 10px 20px; /* Add some padding */
-  font-size: 16px; /* Font size */
-  cursor: pointer; /* Show pointer on hover */
-  margin-top: 10px; /* Add some space above the button */
-
 }
 
-.menu li:hover {
-  background-color: #b321c0; /* Darker shade of blue on hover */
+.menu li a {
+  color: #ffffff; /* White text color */
+  text-decoration: none; /* Remove underline */
+  padding: 8px 16px; /* Adjust padding for better spacing */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s; /* Add smooth transition effect */
+}
+
+.menu li a:hover {
+  background-color: #555; /* Darker shade on hover */
 }
 
 .logout {
   flex: 1;
   text-align: right;
 }
-/* Style for the container that holds the dashboard content */
-.dashboard-container {
-  background-color: #ffffff; /* White background */
-  text-align: center; /* Center the text inside the container */
-  position: relative; /* Set the container position to relative */
+
+/* Style for the logout button */
+.dashboard-button {
+  background-color: #1a39c2; /* Blue background color */
+  color: #fff; /* White text color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px 20px; /* Add some padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Show pointer on hover */
+  margin-top: 10px; /* Add some space above the button */
 }
 
-/* dashboard_styles.css */
-.dashboard-content {
-  background-color: #bdbdbd; /* Replace with your desired color */
-  padding: 20px; /* Add padding for better visibility */
-  border-radius: 0; /* Remove border-radius */
-  margin: 0; /* Remove any default margin */
-  height: calc(100vh - 105px); /* Calculate the height based on viewport height minus header height */
-  box-sizing: border-box; /* Ensure padding is included in the height calculation */
-  border-radius: 10px; /* Rounded corners */
+.dashboard-button:hover {
+  background-color: #2797e2; /* Darker shade of blue on hover */
 }
+/* Header Vége */
+
+
 
 /* Content Chat keresés stb... */
 

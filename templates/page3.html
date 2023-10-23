@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard_styles.css') }}">
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <div class="header">
+        <div class="welcome">
+           <h2>Hello, {{ username }}</h2>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="/dashboard">Keresés</a></li>
+            <li><a href="/chat">Chat</a></li>
+            <li><a href="/page3">Item 3</a></li>
+          </ul>
+        </div>
+        <a href="{{ url_for('logout') }}"><button class="dashboard-button">Logout</button></a>
+      </div>
+      <div class="dashboard-content" id="dashboard-content">
+
+        <div class="main-content1">
+          
+        </div>
+
+        
+
+
+        </div>
+      </div>
+    </div>
+
+    
+
+
+  </body>
+</html>
