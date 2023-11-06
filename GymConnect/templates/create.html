@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Új poszt készítése {% endblock %}</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="title">Cím</label>
+        <input type="text" name="title"
+               placeholder="Poszt címe" class="form-control"
+               value="{{ request.form['title'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="content">Tartalom</label>
+        <textarea name="content" placeholder="Poszt tartalma"
+                  class="form-control">{{ request.form['content'] }}</textarea>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">OK</button>
+    </div>
+</form>
+{% endblock %}

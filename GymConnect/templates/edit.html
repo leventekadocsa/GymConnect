@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Módosítás: "{{ post['title'] }}" {% endblock %}</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="title">Cím</label>
+        <input type="text" name="title" placeholder="Poszt címe"
+               class="form-control"
+               value="{{ request.form['title'] or post['title'] }}">
+        </input>
+    </div>
+
+    <div class="form-group">
+        <label for="content">Tartalom</label>
+        <textarea name="content" placeholder=""
+                  class="form-control">{{ request.form['content'] or post['content'] }}</textarea>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">OK</button>
+    </div>
+</form>
+<hr>
+
+<form action="{{ url_for('delete', id=post['id']) }}" method="POST">
+    <input type="submit" value="Törlés"
+            class="btn btn-danger btn-sm"
+            onclick="return confirm('Biztosan törölni szeretnéd ezt a posztot?')">
+</form>
+
+{% endblock %}
